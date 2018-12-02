@@ -6,6 +6,7 @@ const gulp = require('gulp'),
 	  autoprefixer = require('gulp-autoprefixer'),
 	  sourcemaps = require('gulp-sourcemaps'),
 	  csso = require('gulp-csso'),
+	  zip = require('gulp-zip'),
 	  del = require('del'),
 	  runSequence = require('run-sequence');
 
@@ -16,6 +17,23 @@ sass.compiler = require('node-sass');
 var SassOptions = {
 	outputStyle: 'expanded'
 };
+
+// Defining the required JavaScripts
+var ReqJavaScripts = [
+	'./node_modules/jquery/dist/jquery.min.js',
+	'./node_modules/popper.js/dist/umd/popper.min.js',
+	'./node_modules/bootstrap/dist/js/bootstrap.min.js',
+	'./node_modules/jquery-lazy/jquery.lazy.min.js'
+];
+
+// Defining unnecessary files for packaging
+var unFilesForPack = [
+	'**',
+	'!sources', '!sources/**',
+	'!node_modules', '!node_modules/**',
+	'!dist', '!dist/**',
+	'!package-lock.json'
+];
 
 // The Gulp task for preparing CSS
 gulp.task('sass', function() {
@@ -28,6 +46,23 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('./assets/css'));
 });
 
+// Gulp Task for installing the required JavaScripts
+gulp.task('install-scripts', function() {
+	return gulp.src(ReqJavaScripts)
+		.pipe(gulp.dest('./assets/js'));
+});
+
+// Gulp task for packaging the theme into a ZIP file
+gulp.task('package', function() {
+	var targetDir = 'dist/';
+	var themeName = require('./package.json').name;
+	var filename = themeName + '.zip';
+
+	return gulp.src(unFilesForPack)
+		.pipe(zip(filename))
+		.pipe(gulp.dest(targetDir));
+});
+
 // Gulp task for cleaning the assets directory
 gulp.task('clean', function() {
 	return del.sync(['./assets', './dist']);
@@ -35,7 +70,7 @@ gulp.task('clean', function() {
 
 // The default Gulp task which first does a fresh build and watches for any changes
 gulp.task('default', ['clean'], function() {
-	runSequence('sass');
+	runSequence('sass', 'install-scripts');
 
 	gulp.watch('./sources/sass/**/*.+(scss|sass)', ['sass']);
 	// gulp.watch('./sources/js/**/*.js', ['js-optimize']);
