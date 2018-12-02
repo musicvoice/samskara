@@ -5,7 +5,9 @@ const gulp = require('gulp'),
 	  sass = require('gulp-sass'),
 	  autoprefixer = require('gulp-autoprefixer'),
 	  sourcemaps = require('gulp-sourcemaps'),
-	  csso = require('gulp-csso');
+	  csso = require('gulp-csso'),
+	  del = require('del'),
+	  runSequence = require('run-sequence');
 
 // Setting the sass compiler as node-sass
 sass.compiler = require('node-sass');
@@ -24,4 +26,17 @@ gulp.task('sass', function() {
 		.pipe(csso())
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest('./assets/css'));
+});
+
+// Gulp task for cleaning the assets directory
+gulp.task('clean', function() {
+	return del.sync(['./assets', './dist']);
+});
+
+// The default Gulp task which first does a fresh build and watches for any changes
+gulp.task('default', ['clean'], function() {
+	runSequence('sass');
+
+	gulp.watch('./sources/sass/**/*.+(scss|sass)', ['sass']);
+	// gulp.watch('./sources/js/**/*.js', ['js-optimize']);
 });
