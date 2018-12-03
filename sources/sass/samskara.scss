@@ -18,6 +18,28 @@
 	display: none;
 }
 
+// Font Family
+$font-family-base: 'Open Sans', sans-serif;
+
+// Remove underline from all the anchor elements
+$link-hover-decoration: none;
+
+// Shadows
+$box-shadow: 8px 14px 38px rgba(39,44,49,.05), 1px 3px 8px rgba(39,44,49,.03);
+
+// Rounded buttons
+$btn-border-radius: 70rem;
+$btn-padding-x: 1rem;
+$btn-padding-y: 0.5rem;
+
+.btn {
+	font-family: 'Poppins', sans-serif !important;
+}
+
+::selection {
+  background-color: #BCE3FF; /* WebKit/Blink Browsers */
+}
+
 // ######################################
 // ##            Bootstrap 4           ##
 // ######################################
