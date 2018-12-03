@@ -1,11 +1,16 @@
 <div id="sidebar" class="sidebar col-md-4">
 	<div id="stick" class="sticky-top">
 
-		{{!-- This will output the admin or author's information --}}
+		{{!-- This will output the admin or author's information only if index page --}}
+		{{#is "index"}}
 		{{> "admin-info"}}
+		{{/is}}
 
 		{{!-- This will output the twitter card --}}
 		{{> "twitter-card"}}
+
+		{{!-- This tag will output only if subscribers feature is enabled --}}
+		{{> "subscribe-card"}}
 
 	</div>
 </div>
