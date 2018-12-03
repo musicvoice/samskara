@@ -6,6 +6,7 @@ const gulp = require('gulp'),
 	  autoprefixer = require('gulp-autoprefixer'),
 	  sourcemaps = require('gulp-sourcemaps'),
 	  csso = require('gulp-csso'),
+	  uglify = require('gulp-uglify'),
 	  zip = require('gulp-zip'),
 	  del = require('del'),
 	  runSequence = require('run-sequence');
@@ -46,6 +47,13 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('./assets/css'));
 });
 
+// Gulp Task for optimizing JavaScripts
+gulp.task('optimize-scripts', function() {
+	return gulp.src('./sources/js/**/*.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('./assets/js'));
+})
+
 // Gulp Task for installing the required JavaScripts
 gulp.task('install-scripts', function() {
 	return gulp.src(ReqJavaScripts)
@@ -70,8 +78,8 @@ gulp.task('clean', function() {
 
 // The default Gulp task which first does a fresh build and watches for any changes
 gulp.task('default', ['clean'], function() {
-	runSequence('sass', 'install-scripts');
+	runSequence('sass', 'install-scripts', 'optimize-scripts');
 
 	gulp.watch('./sources/sass/**/*.+(scss|sass)', ['sass']);
-	// gulp.watch('./sources/js/**/*.js', ['js-optimize']);
+	gulp.watch('./sources/js/**/*.js', ['optimize-scripts']);
 });
