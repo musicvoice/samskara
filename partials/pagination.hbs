@@ -1,0 +1,17 @@
+<div class="text-center">
+	<div class="row">
+		<div class="col-sm"><p>
+			{{#if prev}}
+			<a href="{{page_url prev}}"><small>Load next</small></a>
+			{{/if}}
+		</p></div>
+		<div class="col-sm">
+			<p><small>Page {{page}} of {{pages}}</small></p>
+		</div>
+		<div class="col-sm"><p>
+			{{#if next}}
+			<a href="{{page_url next}}"><small>Load previous</small></a>
+			{{/if}}
+		</p></div>
+	</div>
+</div>
