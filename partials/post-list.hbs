@@ -1,0 +1,13 @@
+<article id="{{slug}}" class="home-post">
+	<a href="{{url absolute=true}}"><h2 class="post-title">{{title}}</h2></a>
+	<p class="post-meta text-muted">
+		<small>
+			{{#primary_author}}<a href="{{url absolute='true'}}">{{name}}</a>{{/primary_author}} on {{#if primary_tag}}<a href="{{@blog.url}}/tag/{{primary_tag.slug}}">{{primary_tag.name}}</a>{{/if}} | {{date published_at format="DD MMM YYYY"}}
+		</small>
+	</p>
+	{{#if feature_image}}
+	<div class="post-image shadow" style="background-image: url('{{img_url feature_image absolute='true'}}');"></div>
+	{{/if}}
+	<p class="post-excerpt text-muted">{{excerpt characters="306"}}</p>
+	<a class="post-readmore" href="{{url absolute='true'}}">Read more</a>
+</article>

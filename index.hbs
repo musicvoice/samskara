@@ -6,7 +6,11 @@ into the {body} of the default.hbs template --}}
 	<div class="container">
 		<div class="row">
 			<div class="site-content col-md-8">
-				{{!-- Loop through all the posts --}}
+				{{!-- Loop through each blog post --}}
+				{{#foreach posts limit=@config.posts_per_page}}
+					{{!-- Use our template to format the recived data --}}
+					{{> "post-list"}}
+				{{/foreach}}
 
 				{{!-- This tag outputs the pagination section --}}
 			</div>
