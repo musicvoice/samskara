@@ -1,3 +1,11 @@
 <script type="text/javascript" src="{{asset 'js/jquery.min.js'}}"></script>
 <script type="text/javascript" src="{{asset 'js/popper.min.js'}}"></script>
 <script type="text/javascript" src="{{asset 'js/bootstrap.min.js'}}"></script>
+
+<!-- Javascript for adding padding to sticky sidebar -->
+<script type="text/javascript">
+	$(window).scroll(function() {
+		var offset = $(window).scrollTop();
+		$('#stick').toggleClass('mar', offset > 180);
+	});
+</script>
