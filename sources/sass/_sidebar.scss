@@ -36,11 +36,14 @@
 	}
 }
 
+#admin_info {
+	display: none;
+}
+
 .admin-section {
 	padding: 30px;
 	margin-bottom: 30px;
 	border-radius: 10px;
-	display: none;
 
 	.admin-profile {
 		background-repeat: no-repeat;
@@ -79,6 +82,10 @@
 			opacity: 0.6;
 			transition: opacity 0.3s;
 			margin-right: 15px;
+		}
+
+		a:last-child {
+			margin-right: 0px !important;
 		}
 
 		a:hover {

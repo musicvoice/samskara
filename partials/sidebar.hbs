@@ -6,6 +6,20 @@
 		{{> "admin-info"}}
 		{{/is}}
 
+		{{!-- This will output the author-card only if author page --}}
+		{{#is "author"}}
+		{{> "author-card"}}
+		{{/is}}
+
+		{{!-- This will output the tag-card only if tag page --}}
+		{{#is "tag"}}
+		{{#tag}}
+		<div class="admin-section text-center shadow bg-white">
+			<h4 class="admin-name" style="padding-bottom: 10px;">{{name}}</h4>
+		</div>
+		{{/tag}}
+		{{/is}}
+
 		<div class="mob-only">
 			
 		{{!-- This will output the twitter card --}}
