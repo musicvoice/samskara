@@ -20,10 +20,26 @@ into the {body} of the default.hbs template --}}
 			<div id="sidebar" class="sidebar col-md-4">
 				<div id="stick" class="sticky-top">
 
-					{{!-- This will output the admin or author's information only if index page --}}
-					{{#is "index"}}
-					{{> "admin-info"}}
-					{{/is}}
+					{{#author}}
+					<div class="admin-section text-center shadow bg-white">
+						{{#if profile_image}}
+						<div class="admin-profile shadow" style="background-image: url('{{profile_image}}');"></div>
+						{{/if}}
+						<h4 class="admin-name">{{name}}</h4>
+						<p class="admin-description">{{bio}}<br><small><i class="fas fa-map-marker-alt"></i>{{location}}</p>
+						<p class="admin-social">
+							{{#if website}}
+							<a class="admin-email" target="_blank" rel="noopener" href="{{website}}"><i class="fas fa-globe-asia"></i></a>
+							{{/if}}
+							{{#if twitter}}
+							<a class="admin-twitter" target="_blank" rel="noopener" href="{{twitter_url}}"><i class="fab fa-twitter"></i></a>
+							{{/if}}
+							{{#if facebook}}
+							<a class="admin-facebook" target="_blank" rel="noopener" href="{{facebook_url}}"><i class="fab fa-facebook-square"></i></a>
+							{{/if}}
+						</p>
+					</div>
+					{{/author}}
 
 					{{!-- This will output the tag-card only if tag page --}}
 					{{#is "tag"}}
