@@ -6,3 +6,6 @@ node_modules
 
 # Ignore the dist folder, as it contains released or unreleased code
 dist
+
+# Ignore the preview folder, as it contains static site code
+preview

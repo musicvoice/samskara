@@ -35,7 +35,9 @@
 		"start": "gulp",
 		"package": "gulp package",
 		"test": "gscan .",
-		"clean": "gulp clean"
+		"clean": "gulp clean",
+		"preview": "python preview-generator.py preview",
+		"push": "python preview-generator.py push"
 	},
 	"config": {
 		"posts_per_page": 6
