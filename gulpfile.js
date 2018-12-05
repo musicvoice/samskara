@@ -33,7 +33,7 @@ var unFilesForPack = [
 	'!sources', '!sources/**',
 	'!node_modules', '!node_modules/**',
 	'!dist', '!dist/**',
-	'!package-lock.json'
+	'!package-lock.json', '!*.py'
 ];
 
 // The Gulp task for preparing CSS
