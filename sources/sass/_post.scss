@@ -1,14 +1,53 @@
 .single-article {
 	.article-cover {
 		width: 100%;
-		min-height: 450px;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-color: white;
+
+		.inner {
+			h1,p {
+				color: white;
+			}
+
+			.post-meta {
+				a {
+					color: white !important;
+				}
+			}
+
+			.controls {
+				margin-top: 320px;
+			}
+		}
 	}
 
-	.article-cover:after {
+	.no-cover {
+		min-height: 150px;
+
+		.inner {
+			h1,p {
+				color: black;
+			}
+
+			.post-meta {
+				a {
+					color: black !important;
+				}
+			}
+
+			.controls {
+				margin-top: 120px;
+			}
+		}
+	}
+
+	.has-cover {
+		min-height: 450px;
+	}
+
+	.has-cover:after {
 		position: absolute;
 		width: 100%;
 		min-height: 450px;
@@ -20,14 +59,9 @@
 	}
 
 	.inner {
-		h1,p {
-			color: white;
-		}
-
 		.controls {
 			position: absolute;
 			z-index: 500;
-			margin-top: 320px;
 		}
 
 		.post-title {
@@ -39,7 +73,6 @@
 			padding-left: 10px;
 
 			a {
-				color: white;
 				transition: opacity 0.3s;
 				opacity: 0.6;
 			}

@@ -136,16 +136,24 @@
 }
 
 @media only screen and (max-width: 425px) {
-	.article-cover {
+	.has-cover {
+		min-height: 250px !important;
+
+		.controls {
+			margin-top: 150px !important;
+		}
+	}
+
+	.has-cover:after {
 		min-height: 250px !important;
 	}
 
-	.article-cover:after {
-		min-height: 250px !important;
-	}
-
-	.controls {
-		margin-top: 150px !important;
+	.no-cover {
+		.inner {
+			.controls {
+				margin-top: 60px !important;
+			}
+		}	
 	}
 
 	.post-title {
