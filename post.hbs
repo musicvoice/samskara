@@ -32,9 +32,9 @@ into the {body} of the default.hbs template --}}
 					{{/foreach}}
 				</div>
 				<div class="share-buttons col-sm text-right">
-					<a href="#" class="btn btn-sm twitter"><i class="fab fa-twitter"></i></a>
-					<a href="#" class="btn btn-sm facebook"><i class="fab fa-facebook-square"></i></a>
-					<a href="#" class="btn btn-sm reddit"><i class="fab fa-reddit-alien"></i></a>
+					<a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute='true'}}" target="_blank" rel="noopener" class="btn btn-sm twitter" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute='true'}}" target="_blank" rel="noopener" class="btn btn-sm facebook" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;"><i class="fab fa-facebook-square"></i></a>
+					<a href="https://www.reddit.com/submit?title={{encode title}}&amp;url={{url absolute='true'}}" target="_blank" rel="noopener" class="btn btn-sm reddit"><i class="fab fa-reddit-alien"></i></a>
 				</div>
 			</div>
 		</div>
