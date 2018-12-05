@@ -1,7 +1,7 @@
 <p align="center" style="text-align: center !important;">
 	<img src="https://raw.githubusercontent.com/vasanthdeveloper/samskara/images/logo.png" height="50px" alt="Samskara">
 	<p align="center">( संस्कार ) - Traditional Blog Layout Ghost Theme</p>
-	<p align="center"><strong><a target="_blank" rel="noopener" href="https://vasanthdeveloper.github.io/samskara">Preview</a> | <a href="https://github.com/vasanthdeveloper/samskara/wiki">Documentation</a> | <a target="_blank" rel="noopener" href="https://github.com/vasanthdeveloper/samskara/releases/download/1.0.0/samskara.zip">Download</a></strong></p>
+	<p align="center"><strong><a target="_blank" rel="noopener" href="https://vasanthdeveloper.github.io/samskara">Preview</a> | <a href="https://github.com/vasanthdeveloper/samskara/wiki/Configuring-Samskara">Documentation</a> | <a target="_blank" rel="noopener" href="https://github.com/vasanthdeveloper/samskara/releases/download/1.0.0/samskara.zip">Download</a></strong></p>
 	<img src="https://raw.githubusercontent.com/vasanthdeveloper/samskara/images/main_preview.png" alt="Samskara Ghost Theme"><br><br>
 </p>
 
