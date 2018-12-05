@@ -28,7 +28,6 @@
 			position: absolute;
 			z-index: 500;
 			margin-top: 320px;
-			// width: 100%;
 		}
 
 		.post-title {
@@ -144,6 +143,10 @@
 					color: #888A85;
 					background-color: $light;
 					margin-right: 12px;
+				}
+
+				a:last-child {
+					margin-right: 0px !important;	
 				}
 			}
 
