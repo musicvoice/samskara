@@ -39,20 +39,21 @@ into the {body} of the default.hbs template --}}
 					{{!-- This will output the featured posts --}}
 					{{#if featured_post}}
 					<div id="twitter_card" class="twitter-feed-section text-center shadow bg-white" style="display: block;">
-	<div id="twitter_card_container" class="text-center">
-		{{#get "posts" filter="featured:true" limit="all"}}
-            {{#foreach posts}}
-                <h4><a href="{{url}}" title="{{title}}">{{title}}</a></h4>
-		<a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" width="100%" alt="{{title}}" /></a>
-            {{/foreach}}
-    {{/get}}
+	                       <div id="twitter_card_container" class="text-center">
+                                {{#get "posts" filter="featured:true" limit="all"}}
+                               {{#foreach posts}}
+                               <h4><a href="{{url}}" title="{{title}}">{{title}}</a></h4>
+                               <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" width="100%"     alt="{{title}}" /></a>
+                               {{/foreach}}
+                               {{/get}}
 		
-		</div>
-</div>
+                        </div>
+                        </div>
 					
 
-					</div>
-{{/if}}
+                    </div>
+                    {{/if}}
+                    
 					{{!-- This tag will output only if subscribers feature is enabled --}}
 					{{> "subscribe-card"}}
 
