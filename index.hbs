@@ -44,7 +44,7 @@ into the {body} of the default.hbs template --}}
         {{#if posts}}
             {{#foreach posts}}
                 <h4><a href="{{url}}" title="{{title}}">{{title}}</a></h4>
-		<a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" width="200px" alt="{{title}}" /></a>
+		<a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" width="100%" alt="{{title}}" /></a>
             {{/foreach}}
         {{/if}}
     {{/get}}
