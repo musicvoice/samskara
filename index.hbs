@@ -43,7 +43,8 @@ into the {body} of the default.hbs template --}}
 		{{#get "posts" filter="featured:true" limit="all"}}
         {{#if posts}}
             {{#foreach posts}}
-                <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+                <h4><a href="{{url}}" title="{{title}}">{{title}}</a></h4>
+		<a href="{{url}}" image="{{image}}">{{image}}</a>
             {{/foreach}}
         {{/if}}
     {{/get}}
