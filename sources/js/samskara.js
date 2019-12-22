@@ -48,7 +48,7 @@ function initialize() {
 					document.getElementById('admin_twitter').style.display = 'none';
 				}
 				if (typeof(admin_info.social.facebook) == 'string') {
-					document.getElementById('admin_facebook').href = admin_info.social.facebook;
+					document.getElementById('admin_instagram').href = admin_info.social.facebook;
 				} else {
 					document.getElementById('admin_facebook').style.display = 'none';
 				}
