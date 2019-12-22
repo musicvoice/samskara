@@ -37,13 +37,20 @@ into the {body} of the default.hbs template --}}
 					<div class="no-mobile">
 						
 					{{!-- This will output the featured posts --}}
-					{{#get "posts" filter="featured:true" limit="all"}}
+					
+					<div id="twitter_card" class="twitter-feed-section text-center shadow bg-white" style="display: block;">
+	<div id="twitter_card_container" class="text-right">
+		{{#get "posts" filter="featured:true" limit="all"}}
         {{#if posts}}
             {{#foreach posts}}
                 <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
             {{/foreach}}
         {{/if}}
     {{/get}}
+		
+		</div>
+</div>
+					
 
 					</div>
 
