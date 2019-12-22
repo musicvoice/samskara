@@ -53,9 +53,9 @@ function initialize() {
 					document.getElementById('admin_facebook').style.display = 'none';
 				}
                 if (typeof(admin_info.social.instagram) == 'string') {
-					document.getElementById('admin_instagram').href = admin_info.social.instagram;
+					document.getElementById('admin-instagram').href = admin_info.social.instagram;
 				} else {
-					document.getElementById('admin_instagram').style.display = 'none';
+					document.getElementById('admin-instagram').style.display = 'none';
 				}
 			} else {
 				document.getElementById('admin_social').style.display = 'none';
