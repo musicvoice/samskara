@@ -36,8 +36,14 @@ into the {body} of the default.hbs template --}}
 
 					<div class="no-mobile">
 						
-					{{!-- This will output the twitter card --}}
-					{{> "twitter-card"}}
+					{{!-- This will output the featured posts --}}
+					{{#get "posts" filter="featured:true" limit="all"}}
+        {{#if posts}}
+            {{#foreach posts}}
+                <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+            {{/foreach}}
+        {{/if}}
+    {{/get}}
 
 					</div>
 
