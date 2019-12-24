@@ -6,7 +6,9 @@
 		</small>
 	</p>
 	{{#if feature_image}}
-	<div class="post-image shadow lazy" data-src="{{img_url feature_image absolute='true'}}" href="{{url absolute='true'}}"></div>
+    <a href="{{url absolute='true'}}">
+	   <div class="post-image shadow lazy" data-src="{{img_url feature_image absolute='true'}}" ></div>
+    </a>
 	{{/if}}
 	<p class="post-excerpt text-muted">{{excerpt characters="306"}}</p>
 	<a class="post-readmore" href="{{url absolute='true'}}">Leggi di più</a>
