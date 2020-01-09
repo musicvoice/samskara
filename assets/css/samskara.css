@@ -7623,7 +7623,7 @@ fieldset:disabled a.btn {
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle;
-    content: "";
+    align-content: center;
     background: no-repeat center center;
     background-size: 100% 100%
 }
