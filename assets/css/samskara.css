@@ -7608,9 +7608,10 @@ fieldset:disabled a.btn {
     background-size: 100% 100%
 }
 .navbar-bkgnd {
-    display: inline-block;
+    display: inline;
     width: 1.5em;
     height: 1.5em;
+    align-content: center;
     vertical-align: middle;
     content: "";
     background: no-repeat center center;
