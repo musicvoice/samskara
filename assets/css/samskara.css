@@ -7613,7 +7613,7 @@ fieldset:disabled a.btn {
     height: 1.5em;
     align-content: center;
     vertical-align: middle;
-    content: "";
+    content: "/bkgnd.jpeg";
     background: no-repeat center center;
     background-size: 100% 100%
 }
