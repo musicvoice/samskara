@@ -2557,6 +2557,10 @@ button.bg-dark:hover {
     padding: 1rem!important
 }
 
+.p-9 {
+    padding: 9rem!important
+}
+
 .pt-3,
 .py-3 {
     padding-top: 1rem!important
