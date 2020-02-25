@@ -7485,6 +7485,10 @@ fieldset:disabled a.btn {
     white-space: nowrap
 }
 
+.logo{
+    height: 100px
+}
+
 .navbar-brand:focus,
 .navbar-brand:hover {
     text-decoration: none
