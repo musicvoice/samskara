@@ -26,22 +26,15 @@
 
 	<nav class="navbar navbar-light navbar-expand-lg p-9 navbar-bkgnd border-bottom">
 	
-<header class="site-home-header">
-    {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
-        <div class="inner">
-            {{> "site-nav"}}
-            <div class="site-header-content">
-                <h1 class="site-title">
-                    {{#if @site.logo}}
-                        <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-                    {{else}}
-                        {{@site.title}}
-                    {{/if}}
-                </h1>
-                <h2 class="site-description">{{@site.description}}</h2>
-            </div>
-        </div>
-</header>
+            <div class="container">
+			<a class="navbar-brand center" href="{{@blog.url}}">
+			{{#if @blog.logo}}
+			<img class="navbar-bkgnd-logo center" src="{{@blog.logo}}" alt="{{@blog.title}}">
+			{{else}}
+			{{@blog.title}}
+			{{/if}}
+			</a>
+		</div>
 		<div class="container">
 			<button class="btn btn-light navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav" aria-controls="mainnav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -64,5 +57,5 @@
 
 	{{!-- Ghost outputs important scripts and data with this tag --}}
 	{{ghost_foot}}
-    </body></body>
+</body>
 </html>
