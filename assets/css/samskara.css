@@ -10038,10 +10038,6 @@ button.close {
     font-weight: 600
 }
 
-.single-article .article-content .post-content p:nth-child(1) {
-    font-size: 1.6rem
-}
-
 .single-article .article-content .post-content blockquote {
     border-left: 2px solid #007bff;
     padding: 20px 120px 20px 30px;
