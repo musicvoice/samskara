@@ -42,7 +42,7 @@ into the {body} of the default.hbs template --}}
 	                       <div id="twitter_card_container" class="text-center">
                                 {{#get "posts" filter="featured:true" limit="all"}}
                                {{#foreach posts}}
-                               <h4 class="timeline-Header-title"><a href="{{url}}" title="{{title}}">{{title}}</a></h4>
+                               <h5 class="timeline-Header-title"><a href="{{url}}" title="{{title}}">{{title}}</a></h5>
                                <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" width="100%"     alt="{{title}}" /></a>
                                {{/foreach}}
                                {{/get}}
