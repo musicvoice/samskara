@@ -10409,24 +10409,6 @@ button.close {
   box-sizing: border-box;
 }
 
-body, html {
-   font-family: 'Roboto Slab', serif;
-    margin: 0;
-  width: 100%;
-height: 100%;
-    padding: 0;
-}
-
-body {
-  background-color: #D2DBDD;
-  display: flex;
-  display: -webkit-flex;
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  align-items: center;
-}
-
 .cards {
     width: 100%;
     display: flex;
