@@ -38,8 +38,7 @@ into the {body} of the default.hbs template --}}
 						
 					{{!-- This will output the featured posts --}}
 
-					<div id="twitter_card" class="twitter-feed-section text-center shadow bg-white" style="display: block;">
-	                       
+					
                                 {{#get "posts" filter="featured:true" limit="all"}}
                                {{#foreach posts}}
                                <section class="cards">
@@ -59,8 +58,7 @@ into the {body} of the default.hbs template --}}
 			       {{/foreach}}
                                {{/get}}
 		
-                        
-                        </div>
+                       
 					
 
                     </div>
