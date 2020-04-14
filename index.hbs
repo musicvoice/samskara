@@ -37,11 +37,14 @@ into the {body} of the default.hbs template --}}
 					<div class="no-mobile">
 						
 					{{!-- This will output the featured posts --}}
-				<section class="cards">
+				
 					
                                 {{#get "posts" filter="featured:true" limit="all"}}
                                {{#foreach posts}}
-                               
+			       <style  type="text/css"> .card--{{@number}} .card_img, .card--{{@number}} .card_img--hover {
+    background-image: url('{{img_url feature_image}}') !important;
+} </style>
+                               <section class="cards">
 			       <article class="card card--{{@number}}">
   <div class="card__img"></div>
   <a href="{{url}}" class="card_link">
@@ -51,10 +54,6 @@ into the {body} of the default.hbs template --}}
     <h3 class="card__title">{{title}}</h3>
   </div>
 </article>
-
-<style  type="text/css"> .card--{{@number}} .card_img, .card--{{@number}} .card_img--hover {
-    background-image: url('{{img_url feature_image}}') !important;
-} </style>
 
 </section>
 <br>
