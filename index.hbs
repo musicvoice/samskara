@@ -41,7 +41,7 @@ into the {body} of the default.hbs template --}}
 					
                                 {{#get "posts" filter="featured:true" limit="all"}}
                                {{#foreach posts}}
-			       <style  type="text/css"> .card--{{@number}} .card_img, .card--{{@number}} .card_img--hover {
+			       <style  type="text/css"> .cards .card--{{@number}} .card_img, .cards .card--{{@number}} .card_img--hover {
     background-image: url('{{img_url feature_image}}') !important;
 } </style>
                                <section class="cards">
