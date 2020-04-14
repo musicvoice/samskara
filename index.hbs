@@ -51,13 +51,16 @@ into the {body} of the default.hbs template --}}
     <h3 class="card__title">{{title}}</h3>
   </div>
 </article>
-<style>.card--{{@number}} .card_img, .card--{{@number}} .card_img--hover {
+
+<style> .card--{{@number}} .card_img, .card--{{@number}} .card_img--hover {
     background-image: url('{{img_url feature_image}}') !important;
-}</style>
+} </style>
+
+</section>
 			       
 			       {{/foreach}}
                                {{/get}}
-			</section>
+			
                        
 					
 
