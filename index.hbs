@@ -39,10 +39,10 @@ into the {body} of the default.hbs template --}}
 					{{!-- This will output the featured posts --}}
 
 					<div id="twitter_card" class="twitter-feed-section text-center shadow bg-white" style="display: block;">
-	                       <section class="cards">
+	                       
                                 {{#get "posts" filter="featured:true" limit="all"}}
                                {{#foreach posts}}
-                               
+                               <section class="cards">
 			       <article class="card card--{{@number}}">
   <div class="card__img"></div>
   <a href="{{url}}" class="card_link">
@@ -53,13 +53,13 @@ into the {body} of the default.hbs template --}}
   </div>
 </article>
 <style>.card--{{@number}} .card_img, .card--{{@number}} .card_img--hover {
-    background-image: url('{{img_url feature_image}}');
+    background-image: url('{{img_url feature_image}}') !important;
 }</style>
-			       
+			       </section>
 			       {{/foreach}}
                                {{/get}}
 		
-                        </section>
+                        
                         </div>
 					
 
