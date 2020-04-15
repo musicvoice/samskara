@@ -59,7 +59,16 @@ into the {body} of the default.hbs template --}}
 			       {{/foreach}}
                                {{/get}}
 			
-                       
+                       	<style>
+{{#get "posts" filter="featured:true" limit="all"}}
+                               {{#foreach posts}}
+			        .cards .card--{{@number}} .card__img, .cards .card--{{@number}} .card__img--hover {
+    background-image: url('{{img_url feature_image}}') !important;
+} 
+			       
+			       {{/foreach}}
+                               {{/get}}
+</style>
 					
 
                     </div>
