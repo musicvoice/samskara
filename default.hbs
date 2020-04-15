@@ -16,7 +16,20 @@
 
 	{{!-- This tag outputs SEO meta structured data and other important settings --}}
 	{{ghost_head}}
+	
+	
 	{{header_featured}}
+	
+	<style  type="text/css">
+{{#get "posts" filter="featured:true" limit="all"}}
+                               {{#foreach posts}}
+			        card--{{@number}} .card_img,  card--{{@number}} .card_img--hover {
+    background-image: url('{{img_url feature_image}}') !important;
+} 
+			       
+			       {{/foreach}}
+                               {{/get}}
+</style>
 </head>
 {{#is "post"}}
 <body>
