@@ -10533,6 +10533,40 @@ border-bottom-right-radius: 12px;
     opacity: 1;
 }
 
-
+.cards .card--1 .card_img, .cards .card--1 .card_img--hover {
+    background-image: url('/content/images/2020/03/Cover-CD-Schubert-4.png') !important;
+} 
+			       
+			        .cards .card--2 .card_img, .cards .card--2 .card_img--hover {
+    background-image: url('/content/images/wordpress/2019/11/Apertura.png') !important;
+} 
+			       
+			        .cards .card--3 .card_img, .cards .card--3 .card_img--hover {
+    background-image: url('/content/images/wordpress/2019/10/Cover-CD-Campagnoli.jpg') !important;
+} 
+			       
+			        .cards .card--4 .card_img, .cards .card--4 .card_img--hover {
+    background-image: url('/content/images/wordpress/2019/10/Cover-CD-Mendelssohn-DaVinci.png') !important;
+} 
+			       
+			        .cards .card--5 .card_img, .cards .card--5 .card_img--hover {
+    background-image: url('/content/images/wordpress/2019/10/Cover.jpg') !important;
+} 
+			       
+			        .cards .card--6 .card_img, .cards .card--6 .card_img--hover {
+    background-image: url('/content/images/wordpress/2019/09/cropped-Turandot-Verona-2016-1.jpg') !important;
+} 
+			       
+			        .cards .card--7 .card_img, .cards .card--7 .card_img--hover {
+    background-image: url('/content/images/wordpress/2019/07/cropped-Cover-CD-Ziveri-DaVinci-1.jpg') !important;
+} 
+			       
+			        .cards .card--8 .card_img, .cards .card--8 .card_img--hover {
+    background-image: url('/content/images/wordpress/2019/07/Cover-CD-Legrenzi-Stradivarius.jpg') !important;
+} 
+			       
+			        .cards .card--9 .card_img, .cards .card--9 .card_img--hover {
+    background-image: url('/content/images/wordpress/2019/05/Cover-CD-Lichenthal-DaVincil.jpg') !important;
+} 
 
 /*# sourceMappingURL=maps/samskara.css.map */
