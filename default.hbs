@@ -23,7 +23,7 @@
 	<style>
 {{#get "posts" filter="featured:true" limit="all"}}
                                {{#foreach posts}}
-			        .cards .card--{{@number}} .card_img, .cards .card--{{@number}} .card_img--hover {
+			        .cards .card--{{@number}} .card__img, .cards .card--{{@number}} .card__img--hover {
     background-image: url('{{img_url feature_image}}') !important;
 } 
 			       
