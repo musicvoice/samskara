@@ -1,0 +1,2 @@
+  cd assets
+  git clone https://github.com/jamalneufeld/ghostHunter.git --recursive
