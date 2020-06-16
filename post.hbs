@@ -21,10 +21,10 @@ into the {body} of the default.hbs template --}}
 		</div>
 	</div>
 	<div class="article-content bg-white">
-		<div class="post-content container text-justify col-md-6">
-			{{content}}
-		</div>
-        {{!-- This tag will output the sidebar section --}}
+		<div class="post-content container text-justify" >
+            <div class="col-md-6">{{content}}</div>
+			
+            {{!-- This tag will output the sidebar section --}}
 			<div id="sidebar" class="sidebar col-md-4">
 				<div id="stick" class="sticky-top">
 
@@ -86,6 +86,7 @@ into the {body} of the default.hbs template --}}
 
 				</div>
 			</div>
+		</div>
 		<div class="post-tags container">
 			<div class="row">
 				<div class="tags col-sm text-left">
