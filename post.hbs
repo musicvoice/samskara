@@ -20,69 +20,10 @@ into the {body} of the default.hbs template --}}
 			</div>
 		</div>
 	</div>
-<div class="row">
-	<div class="article-content bg-white col-md-6">
-		<div class="post-content container text-justify " >
-            {{content}}
-		</div>
-    </div>  
-                        {{!-- This tag will output the sidebar section --}}
-			<div id="sidebar" class="sidebar col-md-4">
-				<div id="stick" class="sticky-top">
-
-					{{!-- This will output the admin or author's information only if index page --}}
-					{{#is "index"}}
-					{{> "admin-info"}}
-					{{/is}}
-
-					{{!-- This will output the tag-card only if tag page --}}
-					{{#is "tag"}}
-					{{#tag}}
-					<div class="admin-section text-center shadow bg-white">
-						<h4 class="admin-name" style="padding-bottom: 10px;">{{name}}</h4>
-					</div>
-					{{/tag}}
-					{{/is}}
-
-						
-					{{!-- This will output the featured posts --}}
-				
-					
-                                {{#get "posts" filter="featured:true" limit="all"}}
-                               {{#foreach posts}}
-			       
-                               <section class="cards">
-			       <article class="card card--{{@number}}">
-  <div class="card__img"></div>
-  <a href="{{url}}" class="card_link">
-     <div class="card__img--hover"></div>
-   </a>
-  <div class="card__info">
-    <h3 class="card__title">{{title}}</h3>
-  </div>
-</article>
-
-</section>
-<br>
-			       
-			       {{/foreach}}
-                               {{/get}}
+	<div class="article-content bg-white">
+		<div class="post-content container text-justify">
+			{{content}}
 			
-                       	<style>
-{{#get "posts" filter="featured:true" limit="all"}}
-                               {{#foreach posts}}
-			        .cards .card--{{@number}} .card__img, .cards .card--{{@number}} .card__img--hover {
-    background-image: url('{{img_url feature_image}}') !important;
-} 
-			       
-			       {{/foreach}}
-                               {{/get}}
-</style>
-
-				</div>
-			</div>
-    </div>
-
 		<div class="post-tags container">
 			<div class="row">
 				<div class="tags col-sm text-left">
@@ -131,8 +72,7 @@ into the {body} of the default.hbs template --}}
 			{{/primary_author}}
 		</div>
 	</div>
-            
-            
+
 	{{/post}}
 </main>
 
