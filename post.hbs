@@ -20,11 +20,13 @@ into the {body} of the default.hbs template --}}
 			</div>
 		</div>
 	</div>
-	<div class="article-content bg-white row">
-		<div class="post-content container text-justify col-md-6" >
+<div class="row">
+	<div class="article-content bg-white col-md-6">
+		<div class="post-content container text-justify " >
             {{content}}
 		</div>
-                    {{!-- This tag will output the sidebar section --}}
+    </div>  
+                        {{!-- This tag will output the sidebar section --}}
 			<div id="sidebar" class="sidebar col-md-4">
 				<div id="stick" class="sticky-top">
 
@@ -79,6 +81,8 @@ into the {body} of the default.hbs template --}}
 
 				</div>
 			</div>
+    </div>
+
 		<div class="post-tags container">
 			<div class="row">
 				<div class="tags col-sm text-left">
@@ -127,7 +131,8 @@ into the {body} of the default.hbs template --}}
 			{{/primary_author}}
 		</div>
 	</div>
-
+            
+            
 	{{/post}}
 </main>
 
