@@ -10,7 +10,7 @@ into the {body} of the default.hbs template --}}
 				{{#foreach posts limit=@config.posts_per_page}}
 					{{!-- Use our template to format the recived data --}}
 					{{> "post-list"}}
-					{{#has index="nth:2"}}{{/has}}
+					{{#has index="nth:2"}}{{> "banner"}}{{/has}}
 				{{/foreach}}
 
 				{{!-- This tag outputs the pagination section --}}
