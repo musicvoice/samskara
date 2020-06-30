@@ -11,6 +11,7 @@ into the {body} of the default.hbs template --}}
 					{{!-- Use our template to format the recived data --}}
 					{{> "post-list"}}
 					{{#has index="nth:2"}}{{> "banner"}}{{/has}}
+					{{#has index="2"}}{{> "banner-2"}}{{/has}}
 				{{/foreach}}
 
 				{{!-- This tag outputs the pagination section --}}
